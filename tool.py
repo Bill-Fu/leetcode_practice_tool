@@ -10,8 +10,6 @@ Useful Documents and Tutorial:
 
 """
 Usage:
-
-
 1. Get recommended unsolved practice problems based on frequency
 2. Get recommended reviewed practice problems based on records
 3. Add finished problems to records
@@ -52,7 +50,7 @@ def add_finish_to_records(args):
 
 
 def add_review_to_records(args):
-    record.leetcodeRecord.update_review_by_ID(args.review)
+    record.leetcodeRecord.update_review_by_id(args.review)
 
 
 if __name__ == '__main__':
