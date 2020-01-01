@@ -1,7 +1,7 @@
 import openpyxl
 import datetime
 
-RECORDS_FILE = "practice_record.xlsx"
+from config import *
 
 """
 Format of Record:
@@ -15,7 +15,7 @@ class LeetcodeRecord:
         wb = openpyxl.load_workbook(self.records_file)
         ws = wb.active
 
-        return [row for row in ws.values if row[0] != 'Day']
+        return [row for row in ws.values][1:]
 
     def write_record_to_file(self, record):
         wb = openpyxl.load_workbook(self.records_file)
