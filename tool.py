@@ -25,7 +25,7 @@ def get_new_problem(args):
     difficulty = {1: "Easy", 2: "Medium", 3: "Hard"}
 
     for problem in problems['stat_status_pairs']:
-        if problem['stat']['frontend_question_id'] not in records:
+        if problem['stat']['frontend_question_id'] not in records and difficulty[problem['difficulty']['level']] != "Hard":
             recommendation.append((problem['stat']['frontend_question_id'],
                                    problem['stat']['question__title'],
                                    difficulty[problem['difficulty']['level']]))
